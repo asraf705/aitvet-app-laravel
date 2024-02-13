@@ -2,36 +2,16 @@
 <html lang="en">
 
 
-<!-- index.html  21 Nov 2019 03:44:50 GMT -->
+<!-- {{route('admin.home')}}  21 Nov 2019 03:44:50 GMT -->
 <head>
 
 
-  <meta charset="UTF-8">
-  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <title>ABABIL | Dashboard</title>
+    @include('admin.includes.meta')
+
+  <title>AITVET | Dashboard</title>
 
 
-  <!-- General CSS Files -->
-  <link rel="stylesheet" href="assets/css/app.min.css">
-  <link rel="stylesheet" href="assets/bundles/datatables/datatables.min.css">
-  <link rel="stylesheet" href="assets/bundles/datatables/DataTables-1.10.16/css/dataTables.bootstrap4.min.css">
-  <link rel="stylesheet" href="assets/bundles/summernote/summernote-bs4.css">
-  <link rel="stylesheet" href="assets/bundles/codemirror/lib/codemirror.css">
-  <link rel="stylesheet" href="assets/bundles/codemirror/theme/duotone-dark.css">
-  <link rel="stylesheet" href="assets/bundles/select2/dist/css/select2.min.css">
-  <link rel="stylesheet" href="assets/bundles/jquery-selectric/selectric.css">
-  <link rel="stylesheet" href="assets/bundles/bootstrap-colorpicker/dist/css/bootstrap-colorpicker.min.css">
-  <link rel="stylesheet" href="assets/bundles/bootstrap-timepicker/css/bootstrap-timepicker.min.css">
-  <link rel="stylesheet" href="assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.css">
-
-  <!-- Template CSS -->
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/components.css">
-  <link rel="stylesheet" href="assets/bundles/bootstrap-daterangepicker/daterangepicker.css">
-
-  <!-- Custom style CSS -->
-  <link rel="stylesheet" href="assets/css/custom.css">
-  <link rel='shortcut icon' type='image/x-icon' href='assets/img/favicon.ico' />
+  @include('admin.includes.style')
 
 
 </head>
@@ -75,27 +55,27 @@
               </div>
               <div class="dropdown-list-content dropdown-list-message">
                 <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar
-											text-white"> <img alt="image" src="assets/img/users/user-1.png" class="rounded-circle">
+											text-white"> <img alt="image" src="{{asset('/')}}admin/assets/img/users/user-1.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">John
                       Deo</span>
                     <span class="time messege-text">Please check your mail !!</span>
                     <span class="time">2 Min Ago</span>
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                    <img alt="image" src="{{asset('/')}}admin/assets/img/users/user-2.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                       Smith</span> <span class="time messege-text">Request for leave
                       application</span>
                     <span class="time">5 Min Ago</span>
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-5.png" class="rounded-circle">
+                    <img alt="image" src="{{asset('/')}}admin/assets/img/users/user-5.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Jacob
                       Ryan</span> <span class="time messege-text">Your payment invoice is
                       generated.</span> <span class="time">12 Min Ago</span>
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-4.png" class="rounded-circle">
+                    <img alt="image" src="{{asset('/')}}admin/assets/img/users/user-4.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Lina
                       Smith</span> <span class="time messege-text">hii John, I have upload
                       doc
@@ -103,7 +83,7 @@
                       Min Ago</span>
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-3.png" class="rounded-circle">
+                    <img alt="image" src="{{asset('/')}}admin/assets/img/users/user-3.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Jalpa
                       Joshi</span> <span class="time messege-text">Please do as specify.
                       Let me
@@ -111,7 +91,7 @@
                       Days Ago</span>
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-avatar text-white">
-                    <img alt="image" src="assets/img/users/user-2.png" class="rounded-circle">
+                    <img alt="image" src="{{asset('/')}}admin/assets/img/users/user-2.png" class="rounded-circle">
                   </span> <span class="dropdown-item-desc"> <span class="message-user">Sarah
                       Smith</span> <span class="time messege-text">Client Requirements</span>
                     <span class="time">2 Days Ago</span>
@@ -162,7 +142,7 @@
                   </span>
                 </a> <a href="#" class="dropdown-item"> <span class="dropdown-item-icon bg-info text-white"> <i class="fas
 												fa-bell"></i>
-                  </span> <span class="dropdown-item-desc"> Welcome to ABABIL
+                  </span> <span class="dropdown-item-desc"> Welcome to AITVET
                     template! <span class="time">Yesterday</span>
                   </span>
                 </a>
@@ -173,7 +153,7 @@
             </div>
           </li>
           <li class="dropdown"><a href="#" data-toggle="dropdown"
-              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="assets/img/user.png"
+              class="nav-link dropdown-toggle nav-link-lg nav-link-user"> <img alt="image" src="{{asset('/')}}admin/assets/img/user.png"
                 class="user-img-radious-style"> <span class="d-sm-none d-lg-inline-block"></span></a>
             <div class="dropdown-menu dropdown-menu-right pullDown">
               <div class="dropdown-title">Hello Sarah Smith</div>
@@ -195,16 +175,16 @@
       <div class="main-sidebar sidebar-style-2">
         <aside id="sidebar-wrapper">
           <div class="sidebar-brand">
-            <a href="index.html"> <img alt="image" src="assets/img/logo.png" class="header-logo" /> <span
+            <a href="{{route('admin.home')}}"> <img alt="image" src="{{asset('/')}}admin/assets/img/logo.png" class="header-logo" /> <span
                 class="logo-name"></span>
             </a>
           </div>
           <ul class="sidebar-menu">
             <li class="menu-header">Main</li>
             <li class="dropdown active">
-              <a href="index.html" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
+              <a href="{{route('admin.home')}}" class="nav-link"><i data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
-            
+
             <li class="dropdown">
               <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="command"></i><span>Category</span></a>
               <ul class="dropdown-menu">
@@ -270,7 +250,7 @@
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
-                          <img src="assets/img/banner/1.png" alt="">
+                          <img src="{{asset('/')}}admin/assets/img/banner/1.png" alt="">
                         </div>
                       </div>
                     </div>
@@ -292,7 +272,7 @@
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
-                          <img src="assets/img/banner/2.png" alt="">
+                          <img src="{{asset('/')}}admin/assets/img/banner/2.png" alt="">
                         </div>
                       </div>
                     </div>
@@ -315,7 +295,7 @@
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
-                          <img src="assets/img/banner/3.png" alt="">
+                          <img src="{{asset('/')}}admin/assets/img/banner/3.png" alt="">
                         </div>
                       </div>
                     </div>
@@ -337,7 +317,7 @@
                       </div>
                       <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 pl-0">
                         <div class="banner-img">
-                          <img src="assets/img/banner/4.png" alt="">
+                          <img src="{{asset('/')}}admin/assets/img/banner/4.png" alt="">
                         </div>
                       </div>
                     </div>
@@ -518,13 +498,13 @@
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-8.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-8.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Wildan Ahdian"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-9.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-9.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="John Deo"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-10.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-10.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Sarah Smith"></li>
                             <li class="avatar avatar-sm"><span class="badge badge-primary">+4</span></li>
                           </ul>
@@ -554,10 +534,10 @@
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-1.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-1.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Wildan Ahdian"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-2.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-2.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="John Deo"></li>
                             <li class="avatar avatar-sm"><span class="badge badge-primary">+2</span></li>
                           </ul>
@@ -587,13 +567,13 @@
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-3.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-3.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Wildan Ahdian"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-4.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-4.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="John Deo"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-5.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-5.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Sarah Smith"></li>
                             <li class="avatar avatar-sm"><span class="badge badge-primary">+3</span></li>
                           </ul>
@@ -623,10 +603,10 @@
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-7.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-7.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="John Deo"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-8.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-8.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Sarah Smith"></li>
                             <li class="avatar avatar-sm"><span class="badge badge-primary">+4</span></li>
                           </ul>
@@ -656,13 +636,13 @@
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-9.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-9.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Wildan Ahdian"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-10.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-10.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="John Deo"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-2.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-2.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Sarah Smith"></li>
                             <li class="avatar avatar-sm"><span class="badge badge-primary">+2</span></li>
                           </ul>
@@ -692,13 +672,13 @@
                         <td class="text-truncate">
                           <ul class="list-unstyled order-list m-b-0 m-b-0">
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-8.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-8.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Wildan Ahdian"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-9.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-9.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="John Deo"></li>
                             <li class="team-member team-member-sm"><img class="rounded-circle"
-                                src="assets/img/users/user-10.png" alt="user" data-toggle="tooltip" title=""
+                                src="{{asset('/')}}admin/assets/img/users/user-10.png" alt="user" data-toggle="tooltip" title=""
                                 data-original-title="Sarah Smith"></li>
                             <li class="avatar avatar-sm"><span class="badge badge-primary">+4</span></li>
                           </ul>
@@ -734,7 +714,7 @@
                 </div>
                 <div class="card-body">
                   <div class="support-ticket media pb-1 mb-3">
-                    <img src="assets/img/users/user-1.png" class="user-img mr-2" alt="">
+                    <img src="{{asset('/')}}admin/assets/img/users/user-1.png" class="user-img mr-2" alt="">
                     <div class="media-body ml-3">
                       <div class="badge badge-pill badge-success mb-1 float-right">Feature</div>
                       <span class="font-weight-bold">#89754</span>
@@ -746,7 +726,7 @@
                     </div>
                   </div>
                   <div class="support-ticket media pb-1 mb-3">
-                    <img src="assets/img/users/user-2.png" class="user-img mr-2" alt="">
+                    <img src="{{asset('/')}}admin/assets/img/users/user-2.png" class="user-img mr-2" alt="">
                     <div class="media-body ml-3">
                       <div class="badge badge-pill badge-warning mb-1 float-right">Bug</div>
                       <span class="font-weight-bold">#57854</span>
@@ -758,7 +738,7 @@
                     </div>
                   </div>
                   <div class="support-ticket media pb-1 mb-3">
-                    <img src="assets/img/users/user-3.png" class="user-img mr-2" alt="">
+                    <img src="{{asset('/')}}admin/assets/img/users/user-3.png" class="user-img mr-2" alt="">
                     <div class="media-body ml-3">
                       <div class="badge badge-pill badge-primary mb-1 float-right">Query</div>
                       <span class="font-weight-bold">#85784</span>
@@ -769,7 +749,7 @@
                     </div>
                   </div>
                   <div class="support-ticket media pb-1 mb-3">
-                    <img src="assets/img/users/user-6.png" class="user-img mr-2" alt="">
+                    <img src="{{asset('/')}}admin/assets/img/users/user-6.png" class="user-img mr-2" alt="">
                     <div class="media-body ml-3">
                       <div class="badge badge-pill badge-info mb-1 float-right">Enhancement</div>
                       <span class="font-weight-bold">#25874</span>
@@ -966,45 +946,19 @@
       </div>
       <footer class="main-footer">
         <div class="footer-left">
-          <a href="#">Ababil</a></a>
+          <a href="{{route('home')}}">AITVET</a></a>
         </div>
         <div class="footer-right">
         </div>
       </footer>
     </div>
   </div>
-  <!-- General JS Scripts -->
-  <script src="assets/js/app.min.js"></script>
-  <!-- JS Libraies -->
-  <script src="assets/bundles/apexcharts/apexcharts.min.js"></script>
-  <script src="assets/bundles/datatables/datatables.min.js"></script>
-  <script src="assets/bundles/datatables/DataTables-1.10.16/js/dataTables.bootstrap4.min.js"></script>
-  <script src="assets/bundles/jquery-ui/jquery-ui.min.js"></script>
-  <script src="assets/bundles/cleave-js/dist/cleave.min.js"></script>
-  <script src="assets/bundles/cleave-js/dist/addons/cleave-phone.us.js"></script>
-  <script src="assets/bundles/jquery-pwstrength/jquery.pwstrength.min.js"></script>
-  <script src="assets/bundles/bootstrap-daterangepicker/daterangepicker.js"></script>
-  <script src="assets/bundles/bootstrap-colorpicker/dist/js/bootstrap-colorpicker.min.js"></script>
-  <script src="assets/bundles/bootstrap-timepicker/js/bootstrap-timepicker.min.js"></script>
-  <script src="assets/bundles/bootstrap-tagsinput/dist/bootstrap-tagsinput.min.js"></script>
-  <script src="assets/bundles/select2/dist/js/select2.full.min.js"></script>
-  <script src="assets/bundles/jquery-selectric/jquery.selectric.min.js"></script>
-  <script src="assets/bundles/summernote/summernote-bs4.js"></script>
-  <script src="assets/bundles/codemirror/lib/codemirror.js"></script>
-  <script src="assets/bundles/codemirror/mode/javascript/javascript.js"></script>
-  <script src="assets/bundles/ckeditor/ckeditor.js"></script>
-  <!-- Page Specific JS File -->
-  <script src="assets/js/page/index.js"></script>
-  <script src="assets/js/page/datatables.js"></script>
-  <script src="assets/js/page/advance-table.js"></script>
-  <script src="assets/js/page/forms-advanced-forms.js"></script>
-  
-  <!-- Template JS File -->
-  <script src="assets/js/scripts.js"></script>
-  <!-- Custom JS File -->
-  <script src="assets/js/custom.js"></script>
+
+
+  @include('admin.includes.script')
+
 </body>
 
 
-<!-- index.html  21 Nov 2019 03:47:04 GMT -->
+<!--   21 Nov 2019 03:47:04 GMT -->
 </html>
