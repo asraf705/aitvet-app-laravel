@@ -72,7 +72,7 @@
                                     over
                                     the world”</b>.
                                 <pre style="text-align: right">
-                <button type="button" class="btn btn-outline-success"><a href="./page/about.html">Read More</a></button>
+                <button type="button" class="btn btn-outline-success"><a href="{{route('about')}}">Read More</a></button>
                 </pre>
                             </p>
                         </div>
@@ -741,7 +741,7 @@
                                 </div>
 
                                 <nav class="blog-nav nav nav-justified my-5">
-                                    <a class="nav-link-next nav-item nav-link rounded" href="page/notice.html">
+                                    <a class="nav-link-next nav-item nav-link rounded" href="{{route('notice')}}">
                                         <button type="button" class="btn btn-outline-success">More</button></a>
                                 </nav>
 
