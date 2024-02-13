@@ -20,10 +20,10 @@ use App\Http\Controllers\website\WebsiteController;
 Route::get('/',[WebsiteController::class,'index'])->name('home');
 Route::get('/about',[WebsiteController::class,'about'])->name('about');
 Route::get('/instructor',[WebsiteController::class,'instructor'])->name('instructor');
-Route::get('/instructor',[WebsiteController::class,'notice'])->name('notice');
-Route::get('/instructor',[WebsiteController::class,'admission'])->name('admission');
-Route::get('/instructor',[WebsiteController::class,'admissionform'])->name('admissionform');
-Route::get('/instructor',[WebsiteController::class,'gallery'])->name('gallery');
+Route::get('/notice',[WebsiteController::class,'notice'])->name('notice');
+Route::get('/admission',[WebsiteController::class,'admission'])->name('admission');
+Route::get('/admission/form',[WebsiteController::class,'admissionform'])->name('admissionform');
+Route::get('/gallery',[WebsiteController::class,'gallery'])->name('gallery');
 
 
 Auth::routes();
