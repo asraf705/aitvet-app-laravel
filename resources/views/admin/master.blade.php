@@ -29,9 +29,13 @@
 
 
             @include('admin.includes.left-sidebar')
+            <div class="main-content">
+                @yield('body')
 
-            @yield('body')
 
+                @include('admin.includes.right-sidebar')
+
+            </div>
 
             @include('admin.includes.footer')
 
