@@ -22,7 +22,7 @@
 
 
                             <form role="form" method="POST" action="{{ route('login') }}">
-
+                                @csrf
                                 <!-- Email    -->
 
                                 <div class="form-group mt-3">
@@ -72,9 +72,10 @@
 
                                 <div class="form-group mt-3  ">
                                     @if (Route::has('password.request'))
-                                    <label>
-                                        <span>Forgot <a href="{{ route('password.request') }}" style="color: green;">password ?</a></span>
-                                    </label>
+                                        <label>
+                                            <span>Forgot <a href="{{ route('password.request') }}"
+                                                    style="color: green;">password ?</a></span>
+                                        </label>
                                     @endif
                                 </div>
 

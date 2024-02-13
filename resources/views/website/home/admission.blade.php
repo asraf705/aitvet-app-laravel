@@ -242,7 +242,7 @@
                             </ol>
 
                             <div class="d-grid gap-2 col-lg-12">
-                                <button class="btn btn-success" type="button"><a href="admitionfrom.html"
+                                <button class="btn btn-success" type="button"><a href="{{route('admissionform')}}"
                                         style="color:white"> Online Admission Form
                                     </a></button>
                             </div>
