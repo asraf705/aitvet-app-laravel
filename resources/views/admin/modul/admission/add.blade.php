@@ -1,8 +1,12 @@
 @extends('admin.master')
 
 @section('titel')
-    Dashboard
+    Admission Category
 @endsection
 
 
 @section('body')
+
+
+
+@endsection

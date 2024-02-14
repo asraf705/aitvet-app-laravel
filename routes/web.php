@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\website\WebsiteController;
-use App\Http\Controllers\Admin\DepertmentController;
+use App\Http\Controllers\Admin\Modul\DepertmentController;
+use App\Http\Controllers\Admin\Modul\AdmissionController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,13 +19,13 @@ use App\Http\Controllers\Admin\DepertmentController;
 */
 
 
-Route::get('/',[WebsiteController::class,'index'])->name('home');
-Route::get('/about',[WebsiteController::class,'about'])->name('about');
-Route::get('/instructor',[WebsiteController::class,'instructor'])->name('instructor');
-Route::get('/notice',[WebsiteController::class,'notice'])->name('notice');
-Route::get('/admission',[WebsiteController::class,'admission'])->name('admission');
-Route::get('/admission/form',[WebsiteController::class,'admissionform'])->name('admissionform');
-Route::get('/gallery',[WebsiteController::class,'gallery'])->name('gallery');
+Route::get('/', [WebsiteController::class, 'index'])->name('home');
+Route::get('/about', [WebsiteController::class, 'about'])->name('about');
+Route::get('/instructor', [WebsiteController::class, 'instructor'])->name('instructor');
+Route::get('/notice', [WebsiteController::class, 'notice'])->name('notice');
+Route::get('/admission', [WebsiteController::class, 'admission'])->name('admission');
+Route::get('/admission/form', [WebsiteController::class, 'admissionform'])->name('admissionform');
+Route::get('/gallery', [WebsiteController::class, 'gallery'])->name('gallery');
 
 
 Auth::routes();
@@ -48,6 +49,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::resources(['depertment' => DepertmentController::class]);
+    Route::resources(['admission-category' => AdmissionController::class]);
 
 
 
@@ -61,5 +63,4 @@ All Subadmin Routes List
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
-
 });
