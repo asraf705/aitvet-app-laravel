@@ -14,7 +14,7 @@
 
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="command"></i><span>Category</span></a>
+                        data-feather="command"></i><span>Module</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="#">Depertment Category</a></li>
                     <li><a class="nav-link" href="#">Admission Category</a></li>
@@ -22,23 +22,32 @@
                 </ul>
             </li>
 
-            <li class="dropdown">
+            {{-- <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="box"></i><span>Product</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="product/manage-product.html">Manage Product</a></li>
                 </ul>
-            </li>
+            </li> --}}
 
-            <li class="dropdown-menu">
-                <a href="#" class="nav-link"><span>aaa Product</span></a>
+            <li class="dropdown">
+                <a href="#" class="nav-link"><i data-feather="box"></i><span>Teacher</span></a>
             </li>
 
             <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="box"></i><span>Product
-                        3</span></a>
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="box"></i><span>Notice
+                        Board</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="product/manage-product.html">Manage Product</a></li>
+                    <li><a class="nav-link" href="#">Manage Notice</a></li>
+                </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i
+                        data-feather="box"></i><span>Gallery</span></a>
+                <ul class="dropdown-menu">
+                    <li><a class="nav-link" href="#">Banner Image</a></li>
+                    <li><a class="nav-link" href="#">Gallery Image</a></li>
                 </ul>
             </li>
 
@@ -48,34 +57,26 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="copy"></i><span>Account</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="account/manage-account.html">Manage Account</a></li>
+                    <li><a class="nav-link" href="#">Manage Admin</a></li>
+                    <li><a class="nav-link" href="#">Manage Subadmin</a></li>
+                    <li><a class="nav-link" href="#">Manage Student</a></li>
                 </ul>
             </li>
 
-            <li class="menu-header">Oder</li>
+            <li class="menu-header">Admission</li>
             <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Oder
-                        List</span></a>
+                <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Admission List</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="oder/manage-oder.html">Manage Oder</a></li>
+                    <li><a class="nav-link" href="#">Student Admission</a></li>
                 </ul>
             </li>
 
-            <li class="menu-header">Sell Details</li>
-            <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="box"></i><span>Price</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="price/manage-price.html">Manage Price</a></li>
-                </ul>
-            </li>
-
+            <li class="menu-header">Payment Details</li>
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="copy"></i><span>Sell</span></a>
+                        data-feather="box"></i><span>Payment</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="sell/manage-sell.html">Manage Sell</a></li>
-                    <li><a class="nav-link" href="sell/print-sell.html">Sell info Print</a></li>
+                    <li><a class="nav-link" href="#">Manage Payment</a></li>
                 </ul>
             </li>
 

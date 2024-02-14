@@ -9,7 +9,7 @@
 
     @include('admin.includes.meta')
 
-    <title>AITVET | @yield('titel') </title>
+    <title>AITVET | ADMIN | @yield('titel') </title>
 
 
     @include('admin.includes.style')
