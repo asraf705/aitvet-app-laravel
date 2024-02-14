@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\website\WebsiteController;
+use App\Http\Controllers\Admin\DepertmentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,14 +47,19 @@ All Admin Routes List
 Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
+    Route::resources(['depertment' => DepertmentController::class]);
+
+
+
 });
 
 /*------------------------------------------
 --------------------------------------------
-All Admin Routes List
+All Subadmin Routes List
 --------------------------------------------
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
     Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+    // Route::resources(['depertment' => DepertmentController::class]);
 });

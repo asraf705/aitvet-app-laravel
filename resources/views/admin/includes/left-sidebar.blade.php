@@ -16,7 +16,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="command"></i><span>Module</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="#">Depertment Category</a></li>
+                    <li><a class="nav-link" href="{{route('depertment.index')}}">Depertment Category</a></li>
                     <li><a class="nav-link" href="#">Admission Category</a></li>
                     <li><a class="nav-link" href="#">Teacher's Category</a></li>
                 </ul>
@@ -49,6 +49,10 @@
                     <li><a class="nav-link" href="#">Banner Image</a></li>
                     <li><a class="nav-link" href="#">Gallery Image</a></li>
                 </ul>
+            </li>
+
+            <li class="dropdown">
+                <a href="#" class="nav-link"><i data-feather="box"></i><span>Testimonial</span></a>
             </li>
 
 
