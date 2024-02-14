@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\website\WebsiteController;
 use App\Http\Controllers\Admin\Modul\DepertmentController;
 use App\Http\Controllers\Admin\Modul\AdmissionController;
+use App\Http\Controllers\Admin\Modul\TeacherController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,6 +51,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
     Route::resources(['depertment' => DepertmentController::class]);
     Route::resources(['admission-category' => AdmissionController::class]);
+    Route::resources(['teacher-category' => TeacherController::class]);
 
 
 

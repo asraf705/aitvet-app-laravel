@@ -17,18 +17,12 @@
                         data-feather="command"></i><span>Module</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('depertment.index')}}">Depertment Category</a></li>
-                    <li><a class="nav-link" href="#">Admission Category</a></li>
-                    <li><a class="nav-link" href="#">Teacher's Category</a></li>
+                    <li><a class="nav-link" href="{{route('admission-category.index')}}">Admission Category</a></li>
+                    <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Category</a></li>
                 </ul>
             </li>
 
-            {{-- <li class="dropdown">
-                <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="box"></i><span>Product</span></a>
-                <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="product/manage-product.html">Manage Product</a></li>
-                </ul>
-            </li> --}}
+            <li class="menu-header">Academic</li>
 
             <li class="dropdown">
                 <a href="#" class="nav-link"><i data-feather="box"></i><span>Teacher</span></a>

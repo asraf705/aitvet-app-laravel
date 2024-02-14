@@ -12,7 +12,7 @@ class AdmissionController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin.modul.admission.manage');
     }
 
     /**
@@ -20,7 +20,7 @@ class AdmissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.modul.admission.add');
     }
 
     /**

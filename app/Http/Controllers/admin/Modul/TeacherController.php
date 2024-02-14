@@ -5,14 +5,14 @@ namespace App\Http\Controllers\Admin\Modul;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class DepertmentController extends Controller
+class TeacherController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('admin.modul.depertment.manage');
+        return view('admin.modul.teacher-category.manage');
     }
 
     /**
@@ -20,7 +20,7 @@ class DepertmentController extends Controller
      */
     public function create()
     {
-        return view('admin.modul.depertment.add');
+        return view('admin.modul.teacher-category.add');
     }
 
     /**

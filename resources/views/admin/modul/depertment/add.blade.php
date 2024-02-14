@@ -17,9 +17,9 @@
                                 <h4>Add Depertment</h4>
                             </div>
                             <div class="card-body">
-                                <div class="section-title mt-0">Category Name</div>
+                                <div class="section-title mt-0">Depertmen Name</div>
                                 <div class="form-group">
-                                    <input type="text" name="category_name" class="form-control" required>
+                                    <input type="text" name="depertmen_name" class="form-control" required>
                                 </div>
 
                                 <div class="section-title mt-0">Semester Fees</div>

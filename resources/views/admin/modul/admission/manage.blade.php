@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('titel')
-    Manage Admission Category
+    Admission Category
 @endsection
 
 
@@ -12,9 +12,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Depertment List</h4>
+                            <h4>Admission Category</h4>
                             <div class="card-header-action">
-                                <a href="{{ route('depertment.create') }}" class="btn btn-info">Add Depertment</a>
+                                <a href="{{route('admission-category.create')}}" class="btn btn-info">Add Admission Category</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -23,8 +23,7 @@
                                     <thead>
                                         <tr>
                                             <th class="text-center">Depertment Name</th>
-                                            <th>Semester Fees</th>
-                                            <th>Image</th>
+                                            <th>Admission Fees</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -33,9 +32,6 @@
                                         <tr>
                                             <td>Admin & Dashboard</td>
                                             <td>5</td>
-                                            <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
                                             <td>
                                                 <a href="#" class="btn btn-success">Active</a>
                                                 <a href="#" class="btn btn-warning">Inactive</a>
@@ -49,9 +45,6 @@
                                             <td>Admin & Dashboard</td>
                                             <td>3</td>
                                             <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
-                                            <td>
                                                 <a href="#" class="btn btn-success">Active</a>
                                                 <a href="#" class="btn btn-warning">Inactive</a>
                                             </td>
@@ -64,9 +57,6 @@
 
                                             <td>Admin & Dashboard</td>
                                             <td>7</td>
-                                            <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
                                             <td>
                                                 <a href="#" class="btn btn-success">Active</a>
                                                 <a href="#" class="btn btn-warning">Inactive</a>
