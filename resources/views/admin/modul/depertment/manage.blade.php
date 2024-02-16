@@ -15,7 +15,7 @@
                         <div class="card-header">
                             <h4>Depertment List</h4>
                             <div class="card-header-action">
-                                <a href="{{route('depertment.create')}}" class="btn btn-info">Add Depertment</a>
+                                <a href="{{route('depertment-category.create')}}" class="btn btn-info">Add Depertment</a>
                             </div>
                         </div>
                         <div class="card-body">

@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Admin\Modul;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Admin\Modul\Depertment;
+
+
 
 class DepertmentController extends Controller
 {
@@ -28,7 +31,8 @@ class DepertmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Depertment::newDepertment();
+        return redirect(route('depertment-category.index'))->with('message', 'Category info create successfully.');
     }
 
     /**

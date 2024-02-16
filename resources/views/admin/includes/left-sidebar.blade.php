@@ -16,7 +16,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="command"></i><span>Module</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{route('depertment.index')}}">Depertment Category</a></li>
+                    <li><a class="nav-link" href="{{route('depertment-category.index')}}">Depertment Category</a></li>
                     <li><a class="nav-link" href="{{route('admission-category.index')}}">Admission Category</a></li>
                     <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Category</a></li>
                 </ul>
@@ -25,7 +25,7 @@
             <li class="menu-header">Academic</li>
 
             <li class="dropdown">
-                <a href="#" class="nav-link"><i data-feather="box"></i><span>Teacher</span></a>
+                <a href="{{route('teacher-category.index')}}" class="nav-link"><i data-feather="box"></i><span>Teacher</span></a>
             </li>
 
             <li class="dropdown">

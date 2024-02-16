@@ -1,18 +1,18 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Modul;
+namespace App\Http\Controllers\Admin\Teacher;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 
-class TeachersController extends Controller
+class TeacherinfoController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        //
+        return view('admin.teacher-mange.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class TeachersController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.teacher-mange.add');
     }
 
     /**
