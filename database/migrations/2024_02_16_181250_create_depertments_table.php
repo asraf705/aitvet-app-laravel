@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('depertments', function (Blueprint $table) {
             $table->id();
             $table->string('name')->unique();
+            $table->string('semester_fees');
             $table->text('image')->nullable();
             $table->tinyInteger('status')->default(1)->comment('1-Active,0-Inactive');
             $table->timestamps();

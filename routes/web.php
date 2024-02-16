@@ -57,10 +57,6 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 
 
 
-
-
-
-
 });
 
 /*------------------------------------------
