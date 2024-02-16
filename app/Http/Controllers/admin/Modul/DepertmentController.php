@@ -31,8 +31,8 @@ class DepertmentController extends Controller
      */
     public function store(Request $request)
     {
-        Depertment::newDepertment();
-        return redirect(route('depertment-category.index'))->with('message', 'Category info create successfully.');
+        Depertment::newDepertment($request);
+        return redirect(route('depertment-category.index'))->with('message', 'Depertment categoey create successfully.');
     }
 
     /**
