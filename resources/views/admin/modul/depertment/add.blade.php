@@ -34,7 +34,7 @@
                                 </div>
 
                                 <div class="buttons">
-                                    <a href="#" class="btn btn-lg btn-info col-md-12">Save</a>
+                                    <a type="submit" class="btn btn-lg btn-info col-md-12">Save</a>
                                 </div>
                             </div>
 

@@ -61,7 +61,7 @@
                                             {{ __('Remember Me') }}
                                         </label>
                                     </label>
-                                    <span class="singup"><a href="#">Create an account</a></span>
+                                    <span class="singup"><a href="{{ route('register') }}">Create an account</a></span>
                                 </div>
                                 <br>
 
