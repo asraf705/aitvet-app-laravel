@@ -49,18 +49,13 @@
                                         value="{{ old('email') }}" required autocomplete="email">
                                 </div>
 
-                                <!-- Name    -->
+                                <!-- class Roll    -->
 
                                 <div class="form-group mt-3">
                                     <label for="class_roll">Class Roll</label> <br>
-                                    <input type="number" placeholder="Class Roll" class="form-control @error('class_roll') is-invalid @enderror" name="class_roll"
+                                    <input id="class_roll" type="number" placeholder="Class Roll" class="form-control" name="class_roll"
                                     required autocomplete="class_roll">
 
-                                    @error('class_roll')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                    @enderror
                                 </div>
 
                                 <!-- Password    -->
@@ -83,7 +78,7 @@
 
                                 <div class="form-group mt-3">
                                     <label for="password-confirm">Confirm Password</label> <br>
-                                    <input id="password-confirm" type="password" placeholder="Confirm Password"
+                                    <input id="password-confirm" type="password" name="password_confirmation" placeholder="Confirm Password"
                                         class="form-control" required autocomplete="new-password">
                                 </div>
 
