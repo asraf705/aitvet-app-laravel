@@ -67,7 +67,9 @@
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i data-feather="copy"></i><span>Admission List</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="#">Student Admission</a></li>
+                    <li><a class="nav-link" href="#">Admission Request</a></li>
+                    <li><a class="nav-link" href="#">Confirm Admission</a></li>
+                    <li><a class="nav-link" href="#">Admission Info Print</a></li>
                 </ul>
             </li>
 
