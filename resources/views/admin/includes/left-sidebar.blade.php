@@ -12,9 +12,11 @@
                         data-feather="monitor"></i><span>Dashboard</span></a>
             </li>
 
+            <li class="menu-header">All Category</li>
+
             <li class="dropdown">
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
-                        data-feather="command"></i><span>Module</span></a>
+                        data-feather="command"></i><span>Modules</span></a>
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('depertment-category.index')}}">Depertment Category</a></li>
                     <li><a class="nav-link" href="{{route('admission-category.index')}}">Admission Category</a></li>
