@@ -16,28 +16,34 @@
                             <div class="card-header">
                                 <h4>Add Depertment</h4>
                             </div>
-                            <div class="card-body">
-                                <div class="section-title mt-0">Depertmen Name</div>
-                                <div class="form-group">
-                                    <input type="text" name="name" class="form-control" required>
+
+                            <form action="{{ route('depertment-category.store') }}" method="post" enctype="multipart/form-data">
+                                @csrf
+
+                                <div class="card-body">
+                                    <div class="section-title mt-0">Depertmen Name</div>
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+
+                                    <div class="section-title mt-0">Semester Fees</div>
+                                    <div class="form-group">
+                                        <input type="number" name="semester_fees" class="form-control" required>
+                                    </div>
+
+                                    <div class="section-title mt-0">Image</div>
+                                    <div class="form-group custom-file">
+                                        <input type="file" name="image" class="custom-file-input" id="customFile"
+                                            required>
+                                        <label class="custom-file-label" for="customFile">Choose file</label>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button type="submit" class="btn btn-lg btn-info col-md-12">Save</button>
+                                    </div>
                                 </div>
 
-                                <div class="section-title mt-0">Semester Fees</div>
-                                <div class="form-group">
-                                    <input type="number" name="semester_fees" class="form-control" required>
-                                </div>
-
-                                <div class="section-title mt-0">Image</div>
-                                <div class="form-group custom-file">
-                                    <input type="file" name="image" class="custom-file-input" id="customFile" required>
-                                    <label class="custom-file-label" for="customFile">Choose file</label>
-                                </div>
-
-                                <div class="buttons">
-                                    <a type="submit" class="btn btn-lg btn-info col-md-12">Save</a>
-                                </div>
-                            </div>
-
+                            </form>
                         </div>
                     </div>
                 </div>

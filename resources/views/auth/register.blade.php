@@ -89,7 +89,7 @@
                                 </div>
 
                                 <div class="form-group mt-3  ">
-                                    <span class="singup"><a style="color: green;" href="login.html">Log In</a></span>
+                                    <span class="singup"><a style="color: green;" href="{{ route('login') }}">Log In</a></span>
                                 </div>
                         </div>
 

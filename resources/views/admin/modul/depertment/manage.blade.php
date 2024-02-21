@@ -19,6 +19,9 @@
                             </div>
                         </div>
                         <div class="card-body">
+
+                            <p class="text-center text-success">{{session('message')}}</p>
+
                             <div class="table-responsive">
                                 <table class="table table-striped align-center" id="table-1">
                                     <thead>

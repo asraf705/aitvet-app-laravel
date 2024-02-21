@@ -66,5 +66,5 @@ All Subadmin Routes List
 --------------------------------------------*/
 Route::middleware(['auth', 'user-access:manager'])->group(function () {
 
-    Route::get('/manager/home', [HomeController::class, 'subAdminHome'])->name('manager.home');
+    Route::get('/subadmin/home', [HomeController::class, 'subAdminHome'])->name('manager.home');
 });
