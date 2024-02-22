@@ -5,6 +5,7 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\User;
+use App\Models\Admin\Modul\Depertment;
 
 class CreateUsersSeeder extends Seeder
 {
@@ -25,7 +26,7 @@ class CreateUsersSeeder extends Seeder
             [
                'name'=>'Manager User',
                'email'=>'manager@manager.com',
-               'type'=> 2,
+               'type'=>2,
                'password'=> bcrypt('12345678'),
             ],
             [
@@ -40,4 +41,5 @@ class CreateUsersSeeder extends Seeder
             User::create($user);
         }
     }
+
 }

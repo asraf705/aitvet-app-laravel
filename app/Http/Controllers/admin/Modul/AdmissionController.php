@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Modul;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Modul\Depertment;
 use Illuminate\Http\Request;
+use App\Models\AdmissionCatecory as Admission;
 
 class AdmissionController extends Controller
 {
@@ -31,7 +32,8 @@ class AdmissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Admission::newAdmission($request);
+        return redirect(route('admission-category.index'))->with('message', 'Create Admission Info successfully.');
     }
 
     /**
@@ -39,7 +41,8 @@ class AdmissionController extends Controller
      */
     public function show(string $id)
     {
-        //
+        Admission::checkStatus($id);
+        return redirect(route('admission-category.index'))->with('message', 'Admission Status Updated Successfully');
     }
 
     /**
@@ -47,7 +50,9 @@ class AdmissionController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        // return view('admin.modul.depertment.edit',[
+        //     'asmission' => Admission::find($id),
+        // ]);
     }
 
     /**
