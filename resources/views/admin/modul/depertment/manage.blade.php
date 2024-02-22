@@ -20,7 +20,7 @@
                         </div>
                         <div class="card-body">
 
-                            <p class="text-center text-success">{{ session('message') }}</p>
+                            <p class="text-center text-success">{{ session('message') }}</p> <p class="text-center text-danger">{{ session('dmessage') }}</p>
 
                             <div class="table-responsive">
                                 <table class="table table-striped align-center" id="table-1">
@@ -65,8 +65,8 @@
                                                         method="post">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <a href="#" class="btn btn-danger"
-                                                            onclick="return confirm('Are you sure delete this!!')">Delete</a>
+                                                        <button class="btn btn-danger"
+                                                            onclick="return confirm('Are you sure delete this!!')">Delete</button>
                                                     </form>
                                                 </td>
                                             </tr>

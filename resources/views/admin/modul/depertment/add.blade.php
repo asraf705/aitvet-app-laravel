@@ -26,18 +26,17 @@
                                 <div class="card-body">
                                     <div class="section-title mt-0">Depertmen Name</div>
                                     <div class="form-group">
-                                        <input type="text" name="name" class="form-control" required>
+                                        <input type="text" name="name" placeholder="Depertmen Name" class="form-control" required>
                                     </div>
 
                                     <div class="section-title mt-0">Semester Fees</div>
                                     <div class="form-group">
-                                        <input type="number" name="semester_fees" class="form-control" required>
+                                        <input type="number" name="semester_fees" placeholder="Semester Fees" class="form-control" required>
                                     </div>
 
                                     <div class="section-title mt-0">Image</div>
                                     <div class="form-group custom-file">
-                                        <input type="file" name="image" class="custom-file-input" id="customFile"
-                                            required>
+                                        <input type="file" name="image" class="custom-file-input" id="customFile" required>
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
 

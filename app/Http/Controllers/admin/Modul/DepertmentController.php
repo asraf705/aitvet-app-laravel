@@ -61,7 +61,7 @@ class DepertmentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        Depertment::updateCategory($request, $id);
+        Depertment::updateDepertment($request, $id);
         return redirect(route('depertment-category.index'))->with('message', 'Depertment Info Updated Successfully');
     }
 
@@ -70,7 +70,7 @@ class DepertmentController extends Controller
      */
     public function destroy(string $id)
     {
-        Depertment::deleteCategory($id);
-        return redirect(route('depertment-category.index'))->with('message', 'Depertment Info Deleted Successfully');
+        Depertment::deleteDepertment($id);
+        return redirect(route('depertment-category.index'))->with('dmessage', 'Depertment Info Deleted Successfully');
     }
 }

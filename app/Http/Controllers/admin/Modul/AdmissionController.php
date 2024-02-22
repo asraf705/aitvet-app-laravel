@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin\Modul;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Modul\Depertment;
 use Illuminate\Http\Request;
 
 class AdmissionController extends Controller
@@ -20,7 +21,9 @@ class AdmissionController extends Controller
      */
     public function create()
     {
-        return view('admin.modul.admission.add');
+        return view('admin.modul.admission.add',[
+            'depertments' => Depertment::all(),
+        ]);
     }
 
     /**
