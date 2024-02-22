@@ -15,6 +15,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4>Add Depertment</h4>
+                                <div class="card-header-action">
+                                    <a href="{{ route('depertment-category.index') }}" class="btn btn-info">Manage Depertment</a>
+                                </div>
                             </div>
 
                             <form action="{{ route('depertment-category.store') }}" method="post" enctype="multipart/form-data">
@@ -44,6 +47,7 @@
                                 </div>
 
                             </form>
+
                         </div>
                     </div>
                 </div>

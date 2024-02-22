@@ -76,4 +76,18 @@ class Depertment extends Model
         $depertment->image          = $imageUrl;
         $depertment->save();
     }
+
+    public static function checkStatus($id){
+        self::$depertment = Depertment::find($id);
+        if (self::$depertment->status == 1){
+            self::$depertment->status = 0;
+        }else{
+            self::$depertment->status = 1;
+
+        }
+        self::$depertment->save();
+    }
+
+
+
 }

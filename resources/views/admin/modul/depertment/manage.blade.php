@@ -15,70 +15,62 @@
                         <div class="card-header">
                             <h4>Depertment List</h4>
                             <div class="card-header-action">
-                                <a href="{{route('depertment-category.create')}}" class="btn btn-info">Add Depertment</a>
+                                <a href="{{ route('depertment-category.create') }}" class="btn btn-info">Add Depertment</a>
                             </div>
                         </div>
                         <div class="card-body">
 
-                            <p class="text-center text-success">{{session('message')}}</p>
+                            <p class="text-center text-success">{{ session('message') }}</p>
 
                             <div class="table-responsive">
                                 <table class="table table-striped align-center" id="table-1">
                                     <thead>
                                         <tr>
                                             <th class="text-center">Depertment Name</th>
-                                            <th>Semester Fees</th>
+                                            <th>Semester Fees (TK)</th>
                                             <th>Image</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Admin & Dashboard</td>
-                                            <td>5</td>
-                                            <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
 
-                                        <tr>
-                                            <td>Admin & Dashboard</td>
-                                            <td>3</td>
-                                            <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                        @foreach ($depertments as $depertment)
+                                            <tr>
+                                                <td>{{ $depertment->name }}</td>
+                                                <td>{{ $depertment->semester_fees }}</td>
+                                                <td>
+                                                    <img src="{{ asset($depertment->image) }}" alt="Image"
+                                                        style="height: 50px; width: 50px;">
+                                                </td>
+                                                <td>
 
-                                        <tr>
+                                                    @if ($depertment->status == 1)
+                                                        <a href="{{ route('depertment-category.show', $depertment->id) }}"
+                                                            class="btn btn-success">Active</a>
+                                                    @else
+                                                        <a href="{{ route('depertment-category.show', $depertment->id) }}"
+                                                            class="btn btn-warning">Inactive</a>
+                                                    @endif
 
-                                            <td>Admin & Dashboard</td>
-                                            <td>7</td>
-                                            <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                                </td>
+                                                <td class="d-flex justify-content-center">
+
+                                                    <a href="{{ route('depertment-category.edit', $depertment->id) }}"
+                                                        class="btn btn-primary">Edit</a>
+
+
+                                                    <form
+                                                        action="{{ route('depertment-category.destroy', $depertment->id) }}"
+                                                        method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <a href="#" class="btn btn-danger"
+                                                            onclick="return confirm('Are you sure delete this!!')">Delete</a>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>

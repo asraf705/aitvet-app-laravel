@@ -15,7 +15,9 @@ class DepertmentController extends Controller
      */
     public function index()
     {
-        return view('admin.modul.depertment.manage');
+        return view('admin.modul.depertment.manage',[
+            'depertments' => Depertment::all(),
+        ]);
     }
 
     /**
@@ -40,7 +42,8 @@ class DepertmentController extends Controller
      */
     public function show(string $id)
     {
-        //
+        Depertment::checkStatus($id);
+        return redirect(route('depertment-category.index'))->with('message', 'Depertment Status Updated Successfully');
     }
 
     /**
@@ -48,7 +51,9 @@ class DepertmentController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.modul.depertment.edit',[
+            'depertments' => Depertment::find($id)
+        ]);
     }
 
     /**
@@ -56,7 +61,8 @@ class DepertmentController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Depertment::updateCategory($request, $id);
+        return redirect(route('depertment-category.index'))->with('message', 'Depertment Info Updated Successfully');
     }
 
     /**
@@ -64,6 +70,7 @@ class DepertmentController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Depertment::deleteCategory($id);
+        return redirect(route('depertment-category.index'))->with('message', 'Depertment Info Deleted Successfully');
     }
 }
