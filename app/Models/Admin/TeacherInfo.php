@@ -6,12 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\Admin\Modul\Depertment;
 use App\Models\admin\TeacherCatecory as Post;
+use Illuminate\Support\Str;
 
 class TeacherInfo extends Model
 {
     use HasFactory;
 
-    private static $teacherinfo, $image, $imageUrl, $directory, $imageName, $extension;
+    private static $teacherinfo, $slug, $image, $imageUrl, $directory, $imageName, $extension;
 
 
     private static function getImageUrl($request)
@@ -34,6 +35,7 @@ class TeacherInfo extends Model
 
         self::$teacherinfo = new TeacherInfo();
         self::$teacherinfo->name             = $request->name;
+        self::$teacherinfo->slug             = self::makeSlug($request);
         self::$teacherinfo->depertment_id    = $request->depertment_id;
         self::$teacherinfo->post_id          = $request->post_id;
         self::$teacherinfo->email            = $request->email;
@@ -79,6 +81,7 @@ class TeacherInfo extends Model
     private static function saveBasicInfo($teacherinfo, $request, $imageUrl)
     {
         self::$teacherinfo->name             = $request->name;
+        self::$teacherinfo->slug             = self::makeSlug($request);
         self::$teacherinfo->depertment_id    = $request->depertment_id;
         self::$teacherinfo->post_id          = $request->post_id;
         self::$teacherinfo->email            = $request->email;
@@ -88,6 +91,15 @@ class TeacherInfo extends Model
         self::$teacherinfo->description      = $request->description;
         $teacherinfo->image                  = $imageUrl;
         $teacherinfo->save();
+    }
+
+    private static function makeSlug($request){
+        if ($request->slug){
+            self::$slug = Str::slug($request->slug);
+        }else{
+            self::$slug = Str::slug($request->name);
+        }
+        return self::$slug;
     }
 
     public function depertment()

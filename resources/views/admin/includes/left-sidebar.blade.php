@@ -57,7 +57,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="copy"></i><span>Account</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="#">Admin Account</a></li>
+                    <li><a class="nav-link" href="{{ route('admin.account') }}">Admin Account</a></li>
                     <li><a class="nav-link" href="#">Subadmin Account</a></li>
                     <li><a class="nav-link" href="#">Student Account</a></li>
                 </ul>

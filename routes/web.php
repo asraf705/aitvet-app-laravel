@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\website\WebsiteController;
+use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Admin\Modul\DepertmentController;
 use App\Http\Controllers\Admin\Modul\AdmissionController;
 use App\Http\Controllers\Admin\Modul\TeacherController;
@@ -54,6 +55,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resources(['admission-category' => AdmissionController::class]);
     Route::resources(['teacher-category' => TeacherController::class]);
     Route::resources(['teachers-info' => TeacherinfoController::class]);
+
+    Route::get('/admin/account',[AdminController::class,'accountholder'])->name('admin.account');
 
 
 

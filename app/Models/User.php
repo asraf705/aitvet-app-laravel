@@ -60,4 +60,21 @@ class User extends Authenticatable
             get: fn ($value) =>  ["user", "admin", "manager"][$value],
         );
     }
+
+    // private static $user;
+    // public static function checkStatus($id){
+    //     self::$user = User::find($id);
+    //     if (self::$user->type == 1){
+    //         self::$user->type = 2;
+    //     }
+    //     elseif (self::$user->type == 2) {
+    //         self::$user->type = 0;
+    //     }
+    //     else{
+    //         self::$user->type = 1;
+
+    //     }
+    //     self::$user->save();
+    // }
+
 }

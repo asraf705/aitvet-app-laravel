@@ -35,13 +35,17 @@
                                             </div>
                                         </div>
 
-                                        <div class="col-md-6">
+                                        <div class="col-md-4">
                                             <div class="section-title mt-0">Image</div>
                                             <div class="form-group custom-file">
                                                 <input type="file" name="image" class="custom-file-input"
-                                                    id="customFile" required>
+                                                    id="customFile">
                                                 <label class="custom-file-label" for="customFile">Choose file</label>
                                             </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="{{ asset($teacher->image) }}" alt=""
+                                                height="100" width="120">
                                         </div>
                                     </div>
 

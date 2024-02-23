@@ -55,7 +55,9 @@ class TeacherinfoController extends Controller
     public function edit(string $id)
     {
         return view('admin.teacher-mange.edit',[
-            'teacher' => Post::find($id)
+            'teacher' =>Teacher::find($id),
+            'posts' => Post::all(),
+            'depertments'=> Depertment::all(),
         ]);
     }
 
