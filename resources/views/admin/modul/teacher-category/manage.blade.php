@@ -14,7 +14,8 @@
                         <div class="card-header">
                             <h4>Teacher's Category</h4>
                             <div class="card-header-action">
-                                <a href="{{route('teacher-category.create')}}" class="btn btn-info">Add Teacher's Category</a>
+                                <a href="{{ route('teacher-category.create') }}" class="btn btn-info">Add Teacher's
+                                    Category</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -22,45 +23,41 @@
                                 <table class="table table-striped align-center" id="table-1">
                                     <thead>
                                         <tr>
-                                            <th class="text-center">Teacher's Category</th>
+                                            <th class="text-center">Teacher's Post</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Admin & Dashboard</td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
 
-                                        <tr>
-                                            <td>Admin & Dashboard</td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                        @foreach ($teachers as $teacher)
+                                            <tr>
+                                                <td>{{ $teacher->name }}</td>
+                                                <td>
+                                                    @if ($teacher->status == 1)
+                                                        <a href="{{ route('teacher-category.show', $teacher->id) }}"
+                                                            class="btn btn-success">Active</a>
+                                                    @else
+                                                        <a href="{{ route('teacher-category.show', $teacher->id) }}"
+                                                            class="btn btn-warning">Inactive</a>
+                                                    @endif
+                                                </td>
+                                                <td class="d-flex justify-content-center">
+                                                    <a href="{{ route('teacher-category.edit', $teacher->id) }}"
+                                                        class="btn btn-primary">Edit</a>
 
-                                        <tr>
 
-                                            <td>Admin & Dashboard</td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                                    <form
+                                                        action="{{ route('teacher-category.destroy', $teacher->id) }}"
+                                                        method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger"
+                                                            onclick="return confirm('Are you sure delete this!!')">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>

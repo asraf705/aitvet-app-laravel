@@ -19,17 +19,22 @@
                                     <a href="{{ route('teacher-category.index') }}" class="btn btn-info">Manage Depertment</a>
                                 </div>
                             </div>
-                            <div class="card-body">
-                                <div class="section-title mt-0">Teacher's Category</div>
-                                <div class="form-group">
-                                    <input type="text" name="teacher_category" class="form-control" required>
+
+                            <form action="{{ route('teacher-category.store') }}" method="post">
+                                @csrf
+
+                                <div class="card-body">
+                                    <div class="section-title mt-0">Teacher's Category</div>
+                                    <div class="form-group">
+                                        <input type="text" name="name" class="form-control" required>
+                                    </div>
+
+                                    <div class="buttons">
+                                        <button type="submit" class="btn btn-lg btn-info col-md-12">Save</button>
+                                    </div>
                                 </div>
 
-                                <div class="buttons">
-                                    <a href="#" class="btn btn-lg btn-info col-md-12">Save</a>
-                                </div>
-                            </div>
-
+                            </form>
                         </div>
                     </div>
                 </div>

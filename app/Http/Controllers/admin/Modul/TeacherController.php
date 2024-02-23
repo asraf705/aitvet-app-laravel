@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Modul;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\admin\TeacherCatecory as Teacher;
 
 class TeacherController extends Controller
 {
@@ -12,7 +13,9 @@ class TeacherController extends Controller
      */
     public function index()
     {
-        return view('admin.modul.teacher-category.manage');
+        return view('admin.modul.teacher-category.manage',[
+            'teachers' => Teacher::all(),
+        ]);
     }
 
     /**
@@ -28,7 +31,8 @@ class TeacherController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Teacher::newTeacher($request);
+        return redirect(route('teacher-category.index'))->with('message', 'Teacher categoey create successfully.');
     }
 
     /**
@@ -36,7 +40,8 @@ class TeacherController extends Controller
      */
     public function show(string $id)
     {
-        //
+        Teacher::checkStatus($id);
+        return redirect(route('teacher-category.index'))->with('message', 'Teacher Status Updated Successfully');
     }
 
     /**
@@ -44,7 +49,9 @@ class TeacherController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.modul.depertment.edit',[
+            'teachers' => Teacher::find($id)
+        ]);
     }
 
     /**
@@ -52,7 +59,8 @@ class TeacherController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Teacher::updateTeacher($request, $id);
+        return redirect(route('teacher-category.index'))->with('message', 'Teacher Info Updated Successfully');
     }
 
     /**
@@ -60,6 +68,7 @@ class TeacherController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Teacher::deleteTeacher($id);
+        return redirect(route('teacher-category.index'))->with('dmessage', 'Teacher Info Deleted Successfully');
     }
 }
