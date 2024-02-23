@@ -33,23 +33,43 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>ASraf</td>
-                                            <td>Cmt</td>
-                                            <td>Teacher</td>
-                                            <td>0131495254</td>
-                                            <td>Asraftyg@gmail</td>
+
+                                        @foreach ($teachers as $teacher)
+                                            <tr>
+                                            <td>{{ $teacher->name }}</td>
+                                            <td>{{ $teacher->depertment->name }}</td>
+                                            <td>{{ $teacher->post->name }}</td>
+                                            <td>{{ $teacher->email }}</td>
+                                            <td>{{ $teacher->phone }}</td>
                                             <td>
-                                                <img src="#" alt="Image" style="height: 50px; width: 50px;">
+                                                <img src="{{ asset($teacher->image) }}" alt="Image" style="height: 50px; width: 50px;">
                                             </td>
                                             <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
+                                                @if ($teacher->status == 1)
+                                                        <a href="{{ route('teachers-info.show', $teacher->id) }}"
+                                                            class="btn btn-success">Active</a>
+                                                    @else
+                                                        <a href="{{ route('teachers-info.show', $teacher->id) }}"
+                                                            class="btn btn-warning">Inactive</a>
+                                                    @endif
                                             </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
+                                            <td class="d-flex justify-content-center">
+
+                                                <a href="{{ route('teachers-info.edit', $teacher->id) }}"
+                                                    class="btn btn-primary">Edit</a>
+
+
+                                                <form
+                                                    action="{{ route('teachers-info.destroy', $teacher->id) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    @method('DELETE')
+                                                    <button class="btn btn-danger"
+                                                        onclick="return confirm('Are you sure delete this!!')">Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>

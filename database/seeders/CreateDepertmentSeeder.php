@@ -6,14 +6,12 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Admin\Modul\Depertment;
 
-class CreateDepertments extends Seeder
+class CreateDepertmentSeeder extends Seeder
 {
-        /**
+    /**
      * Run the database seeds.
-     *
-     * @return void
      */
-    public function start(): void
+    public function run(): void
     {
         $depertment = [
             [

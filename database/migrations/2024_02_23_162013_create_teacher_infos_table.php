@@ -17,11 +17,11 @@ return new class extends Migration
             $table->string('image');
             $table->string('depertment_id');
             $table->string('post_id');
-            $table->string('email');
+            $table->string('email')->nullable();
             $table->string('phone');
             $table->string('education');
-            $table->string('other_education');
-            $table->string('description');
+            $table->string('other_education')->nullable();
+            $table->string('description')->nullable();
             $table->tinyInteger('status')->default(1)->comment('1-Active,0-Inactive');
             $table->timestamps();
         });

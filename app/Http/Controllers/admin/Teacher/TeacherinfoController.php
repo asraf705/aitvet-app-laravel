@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Teacher;
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Modul\Depertment;
 use App\Models\admin\TeacherCatecory as Post;
+use App\Models\admin\TeacherInfo as Teacher;
 use Illuminate\Http\Request;
 
 class TeacherinfoController extends Controller
@@ -14,7 +15,9 @@ class TeacherinfoController extends Controller
      */
     public function index()
     {
-        return view('admin.teacher-mange.index');
+        return view('admin.teacher-mange.index',[
+            'teachers'=>Teacher::all(),
+        ]);
     }
 
     /**
@@ -33,7 +36,8 @@ class TeacherinfoController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Teacher::newTeacher($request);
+        return redirect(route('teachers-info.index'))->with('message', 'Add Info successfully.');
     }
 
     /**
@@ -41,7 +45,8 @@ class TeacherinfoController extends Controller
      */
     public function show(string $id)
     {
-        //
+        Teacher::checkStatus($id);
+        return redirect(route('teachers-info.index'))->with('message', 'Teacher Status Updated Successfully');
     }
 
     /**
@@ -49,7 +54,9 @@ class TeacherinfoController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.teacher-mange.edit',[
+            'teacher' => Post::find($id)
+        ]);
     }
 
     /**
@@ -57,7 +64,8 @@ class TeacherinfoController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Teacher::updateTeacher($request, $id);
+        return redirect(route('teachers-info.index'))->with('message', 'Teacher Info Updated Successfully');
     }
 
     /**
@@ -65,6 +73,7 @@ class TeacherinfoController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Teacher::deleteTeacher($id);
+        return redirect(route('teachers-info.index'))->with('dmessage', 'Teacher Info Deleted Successfully');
     }
 }
