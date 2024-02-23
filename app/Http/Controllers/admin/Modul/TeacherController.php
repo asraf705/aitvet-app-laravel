@@ -49,8 +49,8 @@ class TeacherController extends Controller
      */
     public function edit(string $id)
     {
-        return view('admin.modul.depertment.edit',[
-            'teachers' => Teacher::find($id)
+        return view('admin.modul.teacher-category.edit',[
+            'teacher' => Teacher::find($id)
         ]);
     }
 

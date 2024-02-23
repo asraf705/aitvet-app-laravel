@@ -52,9 +52,10 @@ class AdmissionController extends Controller
      */
     public function edit(string $id)
     {
-        // return view('admin.modul.depertment.edit',[
-        //     'asmission' => Admission::find($id),
-        // ]);
+        return view('admin.modul.admission.edit',[
+            'admission' => Admission::find($id),
+            'depertments' => Depertment::all(),
+        ]);
     }
 
     /**
@@ -62,7 +63,8 @@ class AdmissionController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        Admission::updateAdmission($request, $id);
+        return redirect(route('admission-category.index'))->with('message', 'Depertment Info Updated Successfully');
     }
 
     /**
@@ -70,6 +72,7 @@ class AdmissionController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        Admission::deleteAdmission($id);
+        return redirect(route('admission-category.index'))->with('dmessage', 'Depertment Info Deleted Successfully');
     }
 }
