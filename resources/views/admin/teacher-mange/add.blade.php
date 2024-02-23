@@ -1,7 +1,7 @@
 @extends('admin.master')
 
 @section('titel')
-    Admission Category
+    Teacher's Info
 @endsection
 
 
@@ -14,7 +14,7 @@
                     <div class="col-12 col-md-12 col-lg-12">
                         <div class="card">
                             <div class="card-header">
-                                <h4>Add Teacher's Category</h4>
+                                <h4>Add Teacher's Info</h4>
                                 <div class="card-header-action">
                                     <a href="{{ route('teachers-info.index') }}" class="btn btn-info">Manage Depertment</a>
                                 </div>
@@ -45,21 +45,32 @@
                                     <div class="col-md-6">
                                         <div class="section-title mt-0">Depertment</div>
                                         <div class="form-group">
-                                            <input type="text" name="depertment_id" placeholder="Depertment"
-                                                class="form-control" required>
+                                            <select name="depertment_id" class="form-control select2"
+                                                placeholder="Select Depertment" required>
+                                                @foreach ($depertments as $depertment)
+                                                    <option value="{{ $depertment->id }}">{{ $depertment->name }}</option>
+                                                @endforeach
+
+                                            </select>
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
                                         <div class="section-title mt-0">Post</div>
                                         <div class="form-group">
-                                            <input type="text" name="post_id" placeholder="Post" class="form-control"
-                                                required>
+                                            <select name="post_id" class="form-control select2"
+                                                placeholder="Select Depertment" required>
+                                                @foreach ($posts as $post)
+                                                    <option value="{{ $post->id }}">{{ $post->name }}</option>
+                                                @endforeach
+                                            </select>
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <div class="d-flex col-md-12">
+
                                     <div class="col-md-6">
                                         <div class="section-title mt-0">Email</div>
                                         <div class="form-group">
@@ -75,17 +86,19 @@
                                                 class="form-control" required>
                                         </div>
                                     </div>
+
                                 </div>
 
                                 <div class="section-title mt-0">Education</div>
                                 <div class="form-group">
-                                    <input type="text" name="email" placeholder="Email" class="form-control" required>
-                                </div>
-
-                                <div class="section-title mt-0">Education</div>
-                                <div class="form-group">
-                                    <input type="text" name="phone" placeholder="Phone Number" class="form-control"
+                                    <input type="text" name="education" placeholder="Education" class="form-control"
                                         required>
+                                </div>
+
+                                <div class="section-title mt-0">Other Education</div>
+                                <div class="form-group">
+                                    <input type="text" name="other_education" placeholder="Education"
+                                        class="form-control select" required>
                                 </div>
 
                                 <div class="section-title mt-0">Short Description</div>

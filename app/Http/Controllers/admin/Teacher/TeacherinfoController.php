@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin\Teacher;
 
 use App\Http\Controllers\Controller;
+use App\Models\Admin\Modul\Depertment;
+use App\Models\admin\TeacherCatecory as Post;
 use Illuminate\Http\Request;
 
 class TeacherinfoController extends Controller
@@ -20,7 +22,10 @@ class TeacherinfoController extends Controller
      */
     public function create()
     {
-        return view('admin.teacher-mange.add');
+        return view('admin.teacher-mange.add',[
+            'depertments' => Depertment::all(),
+            'posts' =>Post::where('status',1)->get()
+        ]);
     }
 
     /**
