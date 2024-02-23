@@ -15,6 +15,9 @@
                         <div class="card">
                             <div class="card-header">
                                 <h4>Add Teacher's Category</h4>
+                                <div class="card-header-action">
+                                    <a href="{{ route('teacher-category.index') }}" class="btn btn-info">Manage Depertment</a>
+                                </div>
                             </div>
                             <div class="card-body">
                                 <div class="section-title mt-0">Teacher's Category</div>

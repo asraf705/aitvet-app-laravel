@@ -14,7 +14,8 @@
                         <div class="card-header">
                             <h4>Admission Category</h4>
                             <div class="card-header-action">
-                                <a href="{{route('admission-category.create')}}" class="btn btn-info">Add Admission Category</a>
+                                <a href="{{ route('admission-category.create') }}" class="btn btn-info">Add Admission
+                                    Category</a>
                             </div>
                         </div>
                         <div class="card-body">
@@ -24,47 +25,42 @@
                                         <tr>
                                             <th class="text-center">Depertment Name</th>
                                             <th>Admission Fees</th>
+                                            <th>Create Date</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
-                                            <td>Admin & Dashboard</td>
-                                            <td>5</td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                        @foreach ($admissions as $admission)
+                                            <tr>
+                                                <td>{{ $admission->depertment->name }}</td>
+                                                <td>{{ $admission->admission_fees }}</td>
+                                                <td>{{ date('j F Y', strtotime($admission->updated_at)) }}</td>
+                                                <td>
+                                                    @if ($admission->status == 1)
+                                                        <a href="{{ route('admission-category.show', $admission->id) }}"
+                                                            class="btn btn-success">Active</a>
+                                                    @else
+                                                        <a href="{{ route('admission-category.show', $admission->id) }}"
+                                                            class="btn btn-warning">Inactive</a>
+                                                    @endif
+                                                </td>
+                                                <td class="d-flex justify-content-center">
+                                                    <a href="{{ route('admission-category.edit', $admission->id) }}"
+                                                        class="btn btn-primary">Edit</a>
 
-                                        <tr>
-                                            <td>Admin & Dashboard</td>
-                                            <td>3</td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
 
-                                        <tr>
-
-                                            <td>Admin & Dashboard</td>
-                                            <td>7</td>
-                                            <td>
-                                                <a href="#" class="btn btn-success">Active</a>
-                                                <a href="#" class="btn btn-warning">Inactive</a>
-                                            </td>
-                                            <td><a href="#" class="btn btn-primary">Edit</a>
-                                                <a href="#" class="btn btn-danger">Delete</a>
-                                            </td>
-                                        </tr>
+                                                    <form
+                                                        action="{{ route('admission-category.destroy', $admission->id) }}"
+                                                        method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger"
+                                                            onclick="return confirm('Are you sure delete this!!')">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
+                                        @endforeach
 
                                     </tbody>
                                 </table>

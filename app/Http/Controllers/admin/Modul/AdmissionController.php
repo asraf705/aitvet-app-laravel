@@ -14,7 +14,9 @@ class AdmissionController extends Controller
      */
     public function index()
     {
-        return view('admin.modul.admission.manage');
+        return view('admin.modul.admission.manage',[
+            'admissions' => Admission::all(),
+        ]);
     }
 
     /**

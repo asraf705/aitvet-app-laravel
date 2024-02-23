@@ -20,14 +20,14 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('depertment-category.index')}}">Depertment Category</a></li>
                     <li><a class="nav-link" href="{{route('admission-category.index')}}">Admission Category</a></li>
-                    <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Category</a></li>
+                    <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Post</a></li>
                 </ul>
             </li>
 
             <li class="menu-header">Academic</li>
 
             <li class="dropdown">
-                <a href="{{route('teacher-category.index')}}" class="nav-link"><i data-feather="box"></i><span>Teacher</span></a>
+                <a href="{{route('teachers-info.index')}}" class="nav-link"><i data-feather="box"></i><span>Teacher's Informetion</span></a>
             </li>
 
             <li class="dropdown">
