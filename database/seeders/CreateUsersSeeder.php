@@ -19,19 +19,19 @@ class CreateUsersSeeder extends Seeder
             [
                'name'=>'Admin User',
                'email'=>'admin@admin.com',
-               'type'=>1,
+               'status'=>1,
                'password'=> bcrypt('12345678'),
             ],
             [
                'name'=>'Manager User',
                'email'=>'manager@manager.com',
-               'type'=>2,
+               'status'=>2,
                'password'=> bcrypt('12345678'),
             ],
             [
                'name'=>'User',
                'email'=>'user@user.com',
-               'type'=>0,
+               'status'=>0,
                'password'=> bcrypt('12345678'),
             ],
         ];

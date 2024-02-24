@@ -15,9 +15,9 @@ class UserAccess
      * @param  \Closure(\Illuminate\Http\Request): (\Illuminate\Http\Response|\Illuminate\Http\RedirectResponse)  $next
      * @return \Illuminate\Http\Response|\Illuminate\Http\RedirectResponse
      */
-    public function handle(Request $request, Closure $next, $userType): Response
+    public function handle(Request $request, Closure $next, $userStatus): Response
     {
-        if(auth()->user()->type == $userType){
+        if(auth()->user()->status == $userStatus){
             return $next($request);
         }
 

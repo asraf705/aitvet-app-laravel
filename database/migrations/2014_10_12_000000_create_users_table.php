@@ -20,8 +20,8 @@ return new class extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('class_roll')->default(0);
             $table->string('password');
-            $table->tinyInteger('type')->default(0);
-            /* Users: 0=>User, 1=>Admin, 2=>Manager */
+            $table->tinyInteger('status')->default(0);
+            /* Users: 0=>Student, 1=>Admin, 2=>Manager */
             $table->rememberToken();
             $table->timestamps();
         });

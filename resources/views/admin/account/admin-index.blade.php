@@ -21,7 +21,7 @@
                                         <tr>
                                             <th class="text-center">Name</th>
                                             <th>Email</th>
-                                            <th>Type</th>
+                                            <th>Status</th>
                                             <th>Action</th>
                                         </tr>
                                     </thead>
@@ -31,23 +31,8 @@
                                             <tr>
                                                 <td>{{ $user->name }}</td>
                                                 <td>{{ $user->email }}</td>
-
                                                 <td>
-
-                                                    @if ($user->type == 0)
-
-                                                        <a href="#" class="btn btn-success">Student</a>
-
-                                                    @elseif($user->type == 1)
-
-                                                        <a href="#" class="btn btn-info">Admin</a>
-
-                                                    @else
-
-                                                        <a href="#" class="btn btn-warning">Subadmin</a>
-
-                                                    @endif
-
+                                                    {{ $user->status }}
                                                 </td>
 
                                                 <td class="d-flex justify-content-center">

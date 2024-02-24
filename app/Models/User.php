@@ -24,7 +24,7 @@ class User extends Authenticatable
         'email',
         'class_roll',
         'password',
-        'type'
+        'status'
     ];
 
     /**
@@ -54,27 +54,12 @@ class User extends Authenticatable
      * @param  string  $value
      * @return \Illuminate\Database\Eloquent\Casts\Attribute
      */
-    protected function type(): Attribute
+    protected function status(): Attribute
     {
         return new Attribute(
-            get: fn ($value) =>  ["user", "admin", "manager"][$value],
+            get: fn ($value) =>  ["student", "admin", "manager"][$value],
         );
     }
 
-    // private static $user;
-    // public static function checkStatus($id){
-    //     self::$user = User::find($id);
-    //     if (self::$user->type == 1){
-    //         self::$user->type = 2;
-    //     }
-    //     elseif (self::$user->type == 2) {
-    //         self::$user->type = 0;
-    //     }
-    //     else{
-    //         self::$user->type = 1;
-
-    //     }
-    //     self::$user->save();
-    // }
 
 }

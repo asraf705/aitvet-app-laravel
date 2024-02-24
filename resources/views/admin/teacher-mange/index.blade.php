@@ -36,39 +36,39 @@
 
                                         @foreach ($teachers as $teacher)
                                             <tr>
-                                            <td>{{ $teacher->name }}</td>
-                                            <td>{{ $teacher->depertment->name }}</td>
-                                            <td>{{ $teacher->post->name }}</td>
-                                            <td>{{ $teacher->email }}</td>
-                                            <td>{{ $teacher->phone }}</td>
-                                            <td>
-                                                <img src="{{ asset($teacher->image) }}" alt="Image" style="height: 50px; width: 50px;">
-                                            </td>
-                                            <td>
-                                                @if ($teacher->status == 1)
+                                                <td>{{ $teacher->name }}</td>
+                                                <td>{{ $teacher->depertment->name }}</td>
+                                                <td>{{ $teacher->post->name }}</td>
+                                                <td>{{ $teacher->email }}</td>
+                                                <td>{{ $teacher->phone }}</td>
+                                                <td>
+                                                    <img src="{{ asset($teacher->image) }}" alt="Image"
+                                                        style="height: 50px; width: 50px;">
+                                                </td>
+                                                <td>
+                                                    @if ($teacher->status == 1)
                                                         <a href="{{ route('teachers-info.show', $teacher->id) }}"
                                                             class="btn btn-success">Active</a>
                                                     @else
                                                         <a href="{{ route('teachers-info.show', $teacher->id) }}"
                                                             class="btn btn-warning">Inactive</a>
                                                     @endif
-                                            </td>
-                                            <td class="d-flex justify-content-center">
+                                                </td>
+                                                <td class="d-flex justify-content-center">
 
-                                                <a href="{{ route('teachers-info.edit', $teacher->id) }}"
-                                                    class="btn btn-primary">Edit</a>
+                                                    <a href="{{ route('teachers-info.edit', $teacher->id) }}"
+                                                        class="btn btn-primary">Edit</a>
 
 
-                                                <form
-                                                    action="{{ route('teachers-info.destroy', $teacher->id) }}"
-                                                    method="post">
-                                                    @csrf
-                                                    @method('DELETE')
-                                                    <button class="btn btn-danger"
-                                                        onclick="return confirm('Are you sure delete this!!')">Delete</button>
-                                                </form>
-                                            </td>
-                                        </tr>
+                                                    <form action="{{ route('teachers-info.destroy', $teacher->id) }}"
+                                                        method="post">
+                                                        @csrf
+                                                        @method('DELETE')
+                                                        <button class="btn btn-danger"
+                                                            onclick="return confirm('Are you sure delete this!!')">Delete</button>
+                                                    </form>
+                                                </td>
+                                            </tr>
                                         @endforeach
 
                                     </tbody>
