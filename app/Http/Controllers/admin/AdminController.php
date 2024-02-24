@@ -18,14 +18,14 @@ class AdminController extends Controller
             'users'=>User::all(),
         ]);
     }
-    public function show(string $id)
+    public function type(string $id)
     {
         self::$user = User::find($id);
-        if (self::$user->type == 1){
-            self::$user->type = 2;
+        if (self::$user->type == 0){
+            self::$user->type = 1;
         }
-        elseif (self::$user->type == 2) {
-            self::$user->type = 0;
+        elseif (self::$user->type == 1) {
+            self::$user->type = 2;
         }
         else{
             self::$user->type = 1;
