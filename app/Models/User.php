@@ -57,7 +57,7 @@ class User extends Authenticatable
     protected function status(): Attribute
     {
         return new Attribute(
-            get: fn ($value) =>  ["student", "admin", "manager"][$value],
+            get: fn ($value) =>  ["student", "admin", "subadmin"][$value],
         );
     }
 

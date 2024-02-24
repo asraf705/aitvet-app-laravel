@@ -12,12 +12,27 @@ class AdminController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function accountholder()
+    public function adminaccount()
     {
         return view('admin.account.admin-index',[
             'users'=>User::all(),
         ]);
     }
+
+    public function subAdminaccount()
+    {
+        return view('admin.account.subAdmin-index',[
+            'users'=>User::all(),
+        ]);
+    }
+
+    public function studentaccount()
+    {
+        return view('admin.account.student-index',[
+            'users'=>User::all(),
+        ]);
+    }
+
     public function type(string $id)
     {
         self::$user = User::find($id);

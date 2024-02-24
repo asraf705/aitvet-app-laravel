@@ -20,14 +20,14 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('depertment-category.index')}}">Depertment Category</a></li>
                     <li><a class="nav-link" href="{{route('admission-category.index')}}">Admission Category</a></li>
-                    <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Post</a></li>
+                    <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Category</a></li>
                 </ul>
             </li>
 
             <li class="menu-header">Academic</li>
 
             <li class="dropdown">
-                <a href="{{route('teachers-info.index')}}" class="nav-link"><i data-feather="box"></i><span>Teacher's Informetion</span></a>
+                <a href="{{route('teacher-category.index')}}" class="nav-link"><i data-feather="box"></i><span>Teacher</span></a>
             </li>
 
             <li class="dropdown">
@@ -57,9 +57,9 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="copy"></i><span>Account</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="{{ route('admin.account.admin') }}">Admin Account</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.account.sub-admin') }}">Subadmin Account</a></li>
-                    <li><a class="nav-link" href="{{ route('admin.account.student') }}">Student Account</a></li>
+                    <li><a class="nav-link" href="#">Admin Account</a></li>
+                    <li><a class="nav-link" href="#">Subadmin Account</a></li>
+                    <li><a class="nav-link" href="#">Student Account</a></li>
                 </ul>
             </li>
 

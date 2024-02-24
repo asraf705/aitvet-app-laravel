@@ -12,7 +12,7 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Admin Info</h4>
+                            <h4>Sub-Admin Info</h4>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
@@ -28,7 +28,7 @@
                                     <tbody>
 
                                         @foreach ($users as $user)
-                                            @if ($user->status== 'admin')
+                                            @if ($user->status== 'subadmin')
                                                 <tr>
                                                     <td>{{ $user->name }}</td>
                                                     <td>{{ $user->email }}</td>

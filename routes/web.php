@@ -38,9 +38,9 @@ Auth::routes();
 All Normal Users Routes List
 --------------------------------------------
 --------------------------------------------*/
-Route::middleware(['auth', 'user-access:user'])->group(function () {
+Route::middleware(['auth', 'user-access:student'])->group(function () {
 
-    Route::get('/user/home', [HomeController::class, 'user'])->name('user.home');
+    Route::get('/student/home', [HomeController::class, 'student'])->name('student.home');
 });
 
 /*------------------------------------------
@@ -56,7 +56,10 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resources(['teacher-category' => TeacherController::class]);
     Route::resources(['teachers-info' => TeacherinfoController::class]);
 
-    Route::get('/admin/account',[AdminController::class,'accountholder'])->name('admin.account');
+    Route::get('/admin/account/admin',[AdminController::class,'adminaccount'])->name('admin.account.admin');
+    Route::get('/admin/account/sub-admin',[AdminController::class,'subAdminaccount'])->name('admin.account.sub-admin');
+    Route::get('/admin/account/student',[AdminController::class,'studentaccount'])->name('admin.account.student');
+
 
 
 
@@ -67,7 +70,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 All Subadmin Routes List
 --------------------------------------------
 --------------------------------------------*/
-Route::middleware(['auth', 'user-access:manager'])->group(function () {
+Route::middleware(['auth', 'user-access:subadmin'])->group(function () {
 
-    Route::get('/subadmin/home', [HomeController::class, 'subAdminHome'])->name('manager.home');
+    Route::get('/subadmin/home', [HomeController::class, 'subAdminHome'])->name('subadmin.home');
 });
