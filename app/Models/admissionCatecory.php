@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Admin\Modul\Depertment;
 use Illuminate\Database\Eloquent\Model;
 
 
@@ -39,6 +40,10 @@ class AdmissionCatecory extends Model
         $admission->depertment_id           = $request->depertment_id;
         $admission->admission_fees    = $request->admission_fees;
         $admission->save();
+    }
+
+    public function depertment(){
+        return $this->belongsTo(Depertment::class);
     }
 
     public static function checkStatus($id){
