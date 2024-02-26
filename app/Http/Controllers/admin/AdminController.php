@@ -14,39 +14,38 @@ class AdminController extends Controller
      */
     public function adminaccount()
     {
-        return view('admin.account.admin-index',[
-            'users'=>User::all(),
+        return view('admin.account.admin-index', [
+            'users' => User::all(),
         ]);
     }
 
     public function subAdminaccount()
     {
-        return view('admin.account.subAdmin-index',[
-            'users'=>User::all(),
+        return view('admin.account.subAdmin-index', [
+            'users' => User::all(),
         ]);
     }
 
     public function studentaccount()
     {
-        return view('admin.account.student-index',[
-            'users'=>User::all(),
+        return view('admin.account.student-index', [
+            'users' => User::all(),
         ]);
     }
 
-    public function type(string $id)
+    public function editAccount($id)
     {
-        self::$user = User::find($id);
-        if (self::$user->type == 0){
-            self::$user->type = 1;
-        }
-        elseif (self::$user->type == 1) {
-            self::$user->type = 2;
-        }
-        else{
-            self::$user->type = 1;
+        return view('admin.account.edit', [
+            'user' => User::find($id),
+        ]);
+    }
 
-        }
-        self::$user->save();
+
+
+    public function updateAccount(Request $request)
+    {
+        User::updateAcco($request);
+        return back();
     }
 
 }

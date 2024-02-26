@@ -57,4 +57,7 @@ class AdmissionCatecory extends Model
         self::$admission->save();
     }
 
+
+
+
 }

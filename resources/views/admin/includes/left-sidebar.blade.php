@@ -42,7 +42,7 @@
                 <a href="#" class="menu-toggle nav-link has-dropdown"><i
                         data-feather="box"></i><span>Gallery</span></a>
                 <ul class="dropdown-menu">
-                    <li><a class="nav-link" href="#">Banner Image</a></li>
+                    <li><a class="nav-link" href="{{ route('banner-image.index') }}">Banner Image</a></li>
                     <li><a class="nav-link" href="#">Gallery Image</a></li>
                 </ul>
             </li>

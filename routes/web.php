@@ -9,6 +9,7 @@ use App\Http\Controllers\Admin\Modul\DepertmentController;
 use App\Http\Controllers\Admin\Modul\AdmissionController;
 use App\Http\Controllers\Admin\Modul\TeacherController;
 use App\Http\Controllers\Admin\Teacher\TeacherinfoController;
+use App\Http\Controllers\Admin\BannerImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -55,11 +56,18 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resources(['admission-category' => AdmissionController::class]);
     Route::resources(['teacher-category' => TeacherController::class]);
     Route::resources(['teachers-info' => TeacherinfoController::class]);
+    Route::resources(['banner-image' => BannerImageController::class]);
 
+
+
+    //   Account start
     Route::get('/admin/account/admin',[AdminController::class,'adminaccount'])->name('admin.account.admin');
     Route::get('/admin/account/sub-admin',[AdminController::class,'subAdminaccount'])->name('admin.account.sub-admin');
     Route::get('/admin/account/student',[AdminController::class,'studentaccount'])->name('admin.account.student');
+    Route::get('/admin/account/{id}',[AdminController::class,'editAccount'])->name('edit.account');
+    Route::post('/update/category',[AdminController::class,'updateAccount'])->name('update.account');
 
+    //   Account end
 
 
 

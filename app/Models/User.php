@@ -61,5 +61,15 @@ class User extends Authenticatable
         );
     }
 
+    private static $users;
+    public static function updateAccount($request)
+    {
+        self::$users = User::find($request->id);
+        self::$users->name = $request->name;
+        self::$users->email = $request->email;
+        self::$users->class_roll = $request->class_roll;
+        self::$users->save();
+    }
+
 
 }

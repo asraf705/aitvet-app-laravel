@@ -21,7 +21,7 @@
                                         <tr>
                                             <th class="text-center">Name</th>
                                             <th>Email</th>
-                                            <th>Student</th>
+                                            <th>Class Roll</th>
                                             <th>Status</th>
                                             <th>Action</th>
                                         </tr>
@@ -40,7 +40,7 @@
 
                                                     <td class="d-flex justify-content-center">
 
-                                                        <a href="#" class="btn btn-primary">Edit</a>
+                                                        <a href="{{ route('edit.account',['id' =>$user->id]) }}" class="btn btn-primary">Edit</a>
 
                                                         {{-- <form
                                                     action="{{ route('teachers-info.destroy', $user->id) }}"
