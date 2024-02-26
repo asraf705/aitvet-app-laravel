@@ -19,8 +19,9 @@
                                 </div>
                             </div>
 
-                            <form action="{{ route('banner-image.store') }}" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('banner-image.update', $banner->id)  }}" method="post" enctype="multipart/form-data">
                                 @csrf
+                                @method('PUT')
 
                                 <div class="card-body">
                                     <div class="section-title mt-0">Depertment Name</div>

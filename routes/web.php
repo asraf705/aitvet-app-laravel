@@ -10,6 +10,7 @@ use App\Http\Controllers\Admin\Modul\AdmissionController;
 use App\Http\Controllers\Admin\Modul\TeacherController;
 use App\Http\Controllers\Admin\Teacher\TeacherinfoController;
 use App\Http\Controllers\Admin\BannerImageController;
+use App\Http\Controllers\Admin\GalleryImageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -57,6 +58,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::resources(['teacher-category' => TeacherController::class]);
     Route::resources(['teachers-info' => TeacherinfoController::class]);
     Route::resources(['banner-image' => BannerImageController::class]);
+    Route::resources(['gallery-image' => GalleryImageController::class]);
 
 
 

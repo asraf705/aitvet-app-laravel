@@ -13,9 +13,9 @@
                 <div class="col-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4>Depertment List</h4>
+                            <h4>Depertment wise Banner</h4>
                             <div class="card-header-action">
-                                <a href="{{ route('banner-image.create') }}" class="btn btn-info">Add Depertment</a>
+                                <a href="{{ route('banner-image.create') }}" class="btn btn-info">Add Item</a>
                             </div>
                         </div>
                         <div class="card-body">

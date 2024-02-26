@@ -37,7 +37,8 @@
 
                                     <div class="section-title mt-0">Image</div>
                                     <div class="form-group custom-file">
-                                        <input type="file" name="image" class="custom-file-input" id="customFile" required>
+                                        <input type="file" name="image" class="custom-file-input" id="customFile"
+                                            required>
                                         <label class="custom-file-label" for="customFile">Choose file</label>
                                     </div>
 
