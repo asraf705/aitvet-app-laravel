@@ -69,13 +69,13 @@
                                         <div class="col-md-6">
                                             <div class="section-title mt-0">Post</div>
                                             <div class="form-group">
-                                                <select name="post_id" class="form-control select2"
-                                                    data-placeholder="Select Post" required>
+                                                <select name="post" class="form-control" data-placeholder="Select Post"
+                                                    required>
 
-                                                    @foreach ($posts as $post)
-                                                        <option value="{{ $post->id }}" {{ $post->id == $teacher->post_id ? 'selected' : ' ' }}>{{ $post->name }}</option>
-                                                    @endforeach
-
+                                                    <option value=" ">Select Post</option>
+                                                    <option>PRINCIPAL</option>
+                                                    <option>Department in Charge</option>
+                                                    <option>Assistant Teacher</option>
                                                 </select>
                                             </div>
                                         </div>

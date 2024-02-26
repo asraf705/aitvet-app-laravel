@@ -38,7 +38,7 @@
                                             <tr>
                                                 <td>{{ $teacher->name }}</td>
                                                 <td>{{ $teacher->depertment->name }}</td>
-                                                <td>{{ $teacher->post->name }}</td>
+                                                <td>{{ $teacher->post}}</td>
                                                 <td>{{ $teacher->email }}</td>
                                                 <td>{{ $teacher->phone }}</td>
                                                 <td>

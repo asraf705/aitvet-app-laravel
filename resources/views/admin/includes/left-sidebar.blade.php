@@ -20,7 +20,6 @@
                 <ul class="dropdown-menu">
                     <li><a class="nav-link" href="{{route('depertment-category.index')}}">Depertment Category</a></li>
                     <li><a class="nav-link" href="{{route('admission-category.index')}}">Admission Category</a></li>
-                    <li><a class="nav-link" href="{{route('teacher-category.index')}}">Teacher's Post</a></li>
                 </ul>
             </li>
 

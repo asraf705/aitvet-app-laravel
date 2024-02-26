@@ -45,22 +45,22 @@
                                                 <td>
 
                                                     @if ($banner->status == 1)
-                                                        <a href="{{ route('banner-image.show', $banner->id) }}" class="btn btn-success">Active</a>
+                                                        <a href="{{ route('banner-image.show', $banner->id) }}"
+                                                            class="btn btn-success">Active</a>
                                                     @else
-                                                        <a href="{{ route('banner-image.show', $banner->id) }}" class="btn btn-warning">Inactive</a>
+                                                        <a href="{{ route('banner-image.show', $banner->id) }}"
+                                                            class="btn btn-warning">Inactive</a>
                                                     @endif
                                                 </td>
                                                 <td class="d-flex justify-content-center">
                                                     <a href="{{ route('banner-image.edit', $banner->id) }}"
-                                                        class="btn btn-primary">Edit</a>
+                                                        class="btn btn-primary ml-2">Edit</a>
 
-
-                                                    <form
-                                                        action="{{ route('banner-image.destroy', $banner->id) }}"
+                                                    <form action="{{ route('banner-image.destroy', $banner->id) }}"
                                                         method="post">
                                                         @csrf
                                                         @method('DELETE')
-                                                        <button class="btn btn-danger"
+                                                        <button class="btn btn-danger ml-2"
                                                             onclick="return confirm('Are you sure delete this!!')">Delete</button>
                                                     </form>
                                                 </td>

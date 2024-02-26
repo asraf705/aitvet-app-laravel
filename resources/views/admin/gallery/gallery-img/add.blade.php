@@ -15,11 +15,11 @@
                             <div class="card-header">
                                 <h4>Add Gallery Image</h4>
                                 <div class="card-header-action">
-                                    <a href="#" class="btn btn-info">Manage Banner</a>
+                                    <a href="{{ route('gallery-image.index') }}" class="btn btn-info">Manage Banner</a>
                                 </div>
                             </div>
 
-                            <form action="#" method="post" enctype="multipart/form-data">
+                            <form action="{{ route('gallery-image.store') }}" method="post" enctype="multipart/form-data">
                                 @csrf
 
                                 <div class="card-body">
@@ -28,9 +28,9 @@
                                         <select name="depertment_id" class="form-control select2"
                                             placeholder="Select Depertment" required>
 
-                                            {{-- @foreach ($depertments as $depertment)
+                                            @foreach ($depertments as $depertment)
                                                 <option value="{{ $depertment->id }}">{{ $depertment->name }}</option>
-                                            @endforeach --}}
+                                            @endforeach
 
                                         </select>
                                     </div>

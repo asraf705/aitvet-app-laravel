@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Admin\Teacher;
 
 use App\Http\Controllers\Controller;
 use App\Models\Admin\Modul\Depertment;
-use App\Models\admin\TeacherCatecory as Post;
 use App\Models\admin\TeacherInfo as Teacher;
 use Illuminate\Http\Request;
 
@@ -27,7 +26,6 @@ class TeacherinfoController extends Controller
     {
         return view('admin.teacher-mange.add',[
             'depertments' => Depertment::all(),
-            'posts' =>Post::where('status',1)->get()
         ]);
     }
 
@@ -56,7 +54,6 @@ class TeacherinfoController extends Controller
     {
         return view('admin.teacher-mange.edit',[
             'teacher' =>Teacher::find($id),
-            'posts' => Post::all(),
             'depertments'=> Depertment::all(),
         ]);
     }

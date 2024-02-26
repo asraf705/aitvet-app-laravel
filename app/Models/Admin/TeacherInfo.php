@@ -37,7 +37,7 @@ class TeacherInfo extends Model
         self::$teacherinfo->name             = $request->name;
         self::$teacherinfo->slug             = self::makeSlug($request);
         self::$teacherinfo->depertment_id    = $request->depertment_id;
-        self::$teacherinfo->post_id          = $request->post_id;
+        self::$teacherinfo->post          = $request->post;
         self::$teacherinfo->email            = $request->email;
         self::$teacherinfo->phone            = $request->phone;
         self::$teacherinfo->education        = $request->education;
@@ -83,7 +83,7 @@ class TeacherInfo extends Model
         self::$teacherinfo->name             = $request->name;
         self::$teacherinfo->slug             = self::makeSlug($request);
         self::$teacherinfo->depertment_id    = $request->depertment_id;
-        self::$teacherinfo->post_id          = $request->post_id;
+        self::$teacherinfo->post          = $request->post;
         self::$teacherinfo->email            = $request->email;
         self::$teacherinfo->phone            = $request->phone;
         self::$teacherinfo->education        = $request->education;

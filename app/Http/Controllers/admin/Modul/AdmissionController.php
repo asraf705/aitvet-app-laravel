@@ -25,7 +25,7 @@ class AdmissionController extends Controller
     public function create()
     {
         return view('admin.modul.admission.add',[
-            'depertments' => Depertment::all(),
+            'depertments' => Depertment::where('status',1)->get(),
         ]);
     }
 

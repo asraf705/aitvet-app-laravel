@@ -35,28 +35,28 @@
                                     </thead>
                                     <tbody>
 
-                                        {{-- @foreach ($banners as $banner)
+                                        @foreach ($gallerys as $gallery)
                                             <tr>
-                                                <td>{{ $banner->depertment->name }}</td>
+                                                <td>{{ $gallery->depertment->name }}</td>
                                                 <td>
-                                                    <img src="{{ asset($banner->image) }}" alt="Image"
+                                                    <img src="{{ asset($gallery->image) }}" alt="Image"
                                                         style="height: 50px; width: 50px;">
                                                 </td>
                                                 <td>
 
-                                                    @if ($banner->status == 1)
-                                                        <a href="{{ route('banner-image.show', $banner->id) }}" class="btn btn-success">Active</a>
+                                                    @if ($gallery->status == 1)
+                                                        <a href="{{ route('gallery-image.show', $gallery->id) }}" class="btn btn-success">Active</a>
                                                     @else
-                                                        <a href="{{ route('banner-image.show', $banner->id) }}" class="btn btn-warning">Inactive</a>
+                                                        <a href="{{ route('gallery-image.show', $gallery->id) }}" class="btn btn-warning">Inactive</a>
                                                     @endif
                                                 </td>
                                                 <td class="d-flex justify-content-center">
-                                                    <a href="{{ route('banner-image.edit', $banner->id) }}"
+                                                    <a href="{{ route('gallery-image.edit', $gallery->id) }}"
                                                         class="btn btn-primary">Edit</a>
 
 
                                                     <form
-                                                        action="{{ route('banner-image.destroy', $banner->id) }}"
+                                                        action="{{ route('gallery-image.destroy', $gallery->id) }}"
                                                         method="post">
                                                         @csrf
                                                         @method('DELETE')
@@ -66,7 +66,7 @@
                                                 </td>
 
                                             </tr>
-                                        @endforeach --}}
+                                        @endforeach
 
                                     </tbody>
                                 </table>

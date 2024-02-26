@@ -14,7 +14,9 @@ class GalleryImageController extends Controller
      */
     public function index()
     {
-        return view('admin.gallery.gallery-img.manage');
+        return view('admin.gallery.gallery-img.manage',[
+            'gallerys' => Gallery::all(),
+        ]);
     }
 
     /**
