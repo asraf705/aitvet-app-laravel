@@ -39,8 +39,8 @@
                                                 <td>{{ $teacher->name }}</td>
                                                 <td>{{ $teacher->depertment->name }}</td>
                                                 <td>{{ $teacher->post}}</td>
-                                                <td>{{ $teacher->email }}</td>
                                                 <td>{{ $teacher->phone }}</td>
+                                                <td>{{ $teacher->email }}</td>
                                                 <td>
                                                     <img src="{{ asset($teacher->image) }}" alt="Image"
                                                         style="height: 50px; width: 50px;">

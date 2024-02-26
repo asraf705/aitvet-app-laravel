@@ -45,9 +45,8 @@
                                             <div class="form-group">
                                                 <select name="post" class="form-control" data-placeholder="Select Post"
                                                     required>
-
                                                     <option value=" ">Select Post</option>
-                                                    <option>PRINCIPAL</option>
+                                                    <option>Principal</option>
                                                     <option>Department in Charge</option>
                                                     <option>Assistant Teacher</option>
                                                 </select>

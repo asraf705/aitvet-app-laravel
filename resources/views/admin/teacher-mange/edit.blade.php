@@ -26,28 +26,6 @@
                                 @method('PUT')
 
                                 <div class="card-body">
-                                    <div class="d-flex col-md-12">
-                                        <div class="col-md-6">
-                                            <div class="section-title mt-0">Teacher's Name</div>
-                                            <div class="form-group">
-                                                <input type="text" name="name" value="{{ $teacher->name }}"
-                                                    placeholder="Teacher's Name" class="form-control" required>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-4">
-                                            <div class="section-title mt-0">Image</div>
-                                            <div class="form-group custom-file">
-                                                <input type="file" name="image" class="custom-file-input"
-                                                    id="customFile">
-                                                <label class="custom-file-label" for="customFile">Choose file</label>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-2">
-                                            <img src="{{ asset($teacher->image) }}" alt=""
-                                                height="100" width="120">
-                                        </div>
-                                    </div>
 
                                     <div class="d-flex col-md-12">
                                         <div class="col-md-6">
@@ -71,15 +49,37 @@
                                             <div class="form-group">
                                                 <select name="post" class="form-control" data-placeholder="Select Post"
                                                     required>
-
                                                     <option value=" ">Select Post</option>
-                                                    <option>PRINCIPAL</option>
-                                                    <option>Department in Charge</option>
-                                                    <option>Assistant Teacher</option>
+                                                    <option {{ $teacher->post == 'Principal' ? 'selected' : '' }}>Principal</option>
+                                                    <option {{ $teacher->post == 'Department in Charge' ? 'selected' : ' ' }}>Department in Charge</option>
+                                                    <option {{ $teacher->post == 'Assistant Teacher' ? 'selected' : ' ' }}>Assistant Teacher</option>
                                                 </select>
                                             </div>
                                         </div>
 
+                                    </div>
+
+                                    <div class="d-flex col-md-12">
+                                        <div class="col-md-6">
+                                            <div class="section-title mt-0">Teacher's Name</div>
+                                            <div class="form-group">
+                                                <input type="text" name="name" value="{{ $teacher->name }}"
+                                                    placeholder="Teacher's Name" class="form-control" required>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-4">
+                                            <div class="section-title mt-0">Image</div>
+                                            <div class="form-group custom-file">
+                                                <input type="file" name="image" class="custom-file-input"
+                                                    id="customFile">
+                                                <label class="custom-file-label" for="customFile">Choose file</label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <img src="{{ asset($teacher->image) }}" alt="" height="100"
+                                                width="120">
+                                        </div>
                                     </div>
 
                                     <div class="d-flex col-md-12">
