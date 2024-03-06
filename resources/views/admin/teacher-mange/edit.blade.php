@@ -117,7 +117,7 @@
                                     <div class="section-title mt-0">Short Description (Optional)</div>
                                     <div class="form-group">
                                         <textarea type="text" name="description" value="{{ $teacher->description }}" placeholder="Description"
-                                            class="form-control"></textarea>
+                                            class="summernote"></textarea>
                                     </div>
 
                                     <div class="buttons">
