@@ -47,7 +47,7 @@
             </li>
 
             <li class="dropdown">
-                <a href="#" class="nav-link"><i data-feather="box"></i><span>Testimonial</span></a>
+                <a href="{{ route('testimonial.index') }}" class="nav-link"><i data-feather="box"></i><span>Testimonial</span></a>
             </li>
 
 
